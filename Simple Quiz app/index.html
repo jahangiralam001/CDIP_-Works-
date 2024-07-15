@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        #timer {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Quiz Application</h1>
+        <div class="text-center mb-4">
+            <button class="btn btn-primary mr-2" onclick="loadQuiz('math')">Math</button>
+            <button class="btn btn-primary mr-2" onclick="loadQuiz('english')">English</button>
+            <button class="btn btn-primary" onclick="loadQuiz('general')">General Knowledge</button>
+        </div>
+        <div id="timer" class="text-center">Time left: <span id="time">10</span> seconds</div>
+        <div id="quiz-container" data-subject="math"></div>
+        <div class="text-center mt-4">
+            <button id="next-question" class="btn btn-secondary mr-2" onclick="nextQuestion()">Next</button>
+            <button id="prev-question" class="btn btn-secondary mr-2" onclick="prevQuestion()">Previous</button>
+            <button id="submit-quiz" class="btn btn-success">Submit Quiz</button>
+   
+        </div>
+        <div id="result" class="text-center mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
